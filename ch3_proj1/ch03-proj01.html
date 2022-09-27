@@ -1,0 +1,68 @@
+<!--
+Sebastian Thomas Bach
+00332111@student.necc.edu
+Affiliation: Student, Northern Essex Community College
+Course: CIS 235, Web Programming I
+Instructor: Professor Ethel Schuster
+Assignment: Assignment #2: HTML Basics Practice, Project 1
+Date: 9/23/2022
+Description: This assignment reproduces a simple web page depicted in the textbook. The
+web page displays the textbook title (h1 heading), the authors' names in emphasized/italic font-style,
+a small PNG of the textbook cover hyperlinked to a larger version of the same image, a line of text
+describing the subject of the textbook, a hyperlink to the official textbook website, the words "First
+Chapters" (h2 heading), and, finally, an ordered list that enumerates the first four chapters of the textbook.
+-->
+
+<!--Below are the basic HTML structural tags specified by the textbook, including the !DOCTYPE, html,
+head, meta, and body tags.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=yes, initial-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Please note that the graphic of the "Simple Single Page" in the textbook depicts a browser tab
+    labeled "Lab 3," which suggests to me that the <title> tag should surround that text. I recognize
+    this might be confusing since this document represents Project 1 of Chapter 3, not "Project 3" and
+    certainly not "Lab 3." In the interests of adhering to the directions of the assignment, I have
+    reproduced that title below, although it may create some initial confusion as to the identity of
+    this particular project (1 of 3).-->
+    <title>Lab 3</title>
+</head>
+
+<body>
+
+    <h1>Fundamentals of Web Development</h1>
+
+    <p>
+        <em>By Randy Connolly and Ricardo Hoar</em>
+    </p>
+
+    <!-- Please note that the Project 1 instructions reference JPEG files, whereas the starter files
+    provided in the official GitHub repository are PNGs. -->
+    <a href="images/cover-large.png" target="_self"><img src="images/cover-small.png"
+        alt="A graphic depicting the cover of the textbook 'Fundamentals of Web
+        Development,' 3rd edition by Randy Connolly and Ricardo Hoar"></a>
+
+    <p>
+        This textbook covers a broad range of topics required for modern web development.
+    </p>
+
+    <p>
+        <!-- No HTTPS for the official textbook website in 2022? For shame! -->
+        <a href="http://www.funwebdev.com" target="_self">Learn more</a>
+    </p>
+
+    <h2>First Chapters</h2>
+
+    <ol>
+        <li>Introduction to Web Development</li>
+        <li>How the Web Works</li>
+        <li>Introduction to HTML</li>
+        <li>Introduction to CSS</li>
+    </ol>
+
+</body>
+
+</html>

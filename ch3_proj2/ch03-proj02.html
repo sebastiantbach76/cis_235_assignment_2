@@ -1,0 +1,101 @@
+<!--
+Sebastian Thomas Bach
+00332111@student.necc.edu
+Affiliation: Student, Northern Essex Community College
+Course: CIS 235, Web Programming I
+Instructor: Professor Ethel Schuster
+Assignment: Assignment #2: HTML Basics Practice, Project 2
+Date: 9/23/2022
+Description: This assignment asks the student to add clearer meaning to the layout of the "Share Your Travels" webpage,
+which overuses <div> tags that neither convey semantic value nor coordinate with styling (via class or id
+attributes) to compartmentalize various styles of the page's content. SEE MORE DISCUSSION IN THE COMMENTS AT THE BOTTOM
+OF THIS PAGE.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>Share Your Travels</title>
+   </head>
+   <body>
+      <header>
+         <img src="images/share-logo.png" alt="logo"/>
+         <nav>
+            <p>
+               <a href="#description">Description</a> | <a href="#related">Related</a> | <a href="#reviews">Reviews</a>
+            </p>
+         </nav>
+      </header>
+
+      <h2>Venice - Grand Canal</h2>
+
+      <main>
+         <section>
+           <h3 id="description">Description</h3>
+           <p>This view of the Grand Canal in
+              <a href="https://en.wikipedia.org/wiki/Venice">Venice</a>
+              was taken from the <strong>Ponte di Rialto</strong>.
+           </p>
+            <!-- Adding the <figure> tags below caused the photograph and caption to indent right. -->
+           <figure>
+            <img src="images/venice.jpg" alt="Venice" />
+            <figcaption>Photo by Randy Connolly</figcaption>
+           </figure>
+         </section>
+
+         <section>
+            <h3 id="related">Related Images</h3>
+            <img src="images/v1.jpg" alt="More Venice" /><img src="images/v2.jpg" alt="More Venice" /><img src="images/v3.jpg" alt="More Venice" />
+         </section>
+
+         <section>
+            <h3 id="reviews">Reviews</h3>
+            <article>
+               <p>By Hypatia on <time>2019-10-23</time></p>
+               <p>I love Venice in the morning.</p>
+            </article>
+            <hr>
+            <article>
+               <p>By Curia on <time>2019-12-11</time></p>
+               <p>I want to visit Venice!</p>
+            </article>
+         </section>
+      </main>
+      <footer>
+         <p>Copyright &copy; 2020 Share Your Travels</p>
+         <nav>
+            <p>
+               <a href="#description">Description</a> | <a href="#related">Related</a> | <a href="#reviews">Reviews</a>
+            </p>
+         </nav>
+      </footer>
+   </body>
+</html>
+
+<!--
+In other words, <div> tags might be used effectively to assign CSS selectors to different areas of the webpage;
+however, they prove ineffective at communicating useful information about the structure of the page. Semantic tags,
+such as <section> or <article>, do a far better job of demarcating the conceptual borders of different portions of a
+page. The <section> tag, for instance, delineates a self-contained unit of meaning (e.g., two reviews of Venice that
+belong to the conceptual category "reviews"); within the opening and closing <section> tags, there may be numerous
+block elements, each with their own styling variations contained by <div> tags (or, put another way, self-contained
+units of style). Similarly, the <span> tag, which simply coveys that specific inline styling stretches from the
+opening to the closing <span> tags, delineates different styles that many occur within block elements without adding
+any meaning to the text that it marks up (though it does change the physical appearance of that text).
+
+While it is often the case that semantic tags do not modify the appearance of webpages, they do offer
+tremendous value in terms of how other human beings interpret and interact with those pages. (Notably, adding the
+<figure> tags to the original webpage indented the large photograph of Venice and its caption.) If a large webpage were
+to contain a legion of unadorned <div> tags (i.e., <div> tags with no useful attributes such as class or id),
+development team members would experience greater difficulty maintaining that page in the absence of clear meaningful
+markup indicating the concepts each section should convey to the reader. If those team members entered a search query
+for, e.g., <article>, in a semantic webpage, they could locate areas in need of revision more quickly than browsing
+through a sea of non-expressive <div> tag hits. Semantic webpages also perform better on various levels than pages that
+focus strictly on meaningless divisions: loading times, accessibility (because conceptual divisions become easier to
+interpret by assistive devices), and search engine optimization (web crawlers can locate content and, in turn, their
+associated search engines can, e.g., return hits for memorable quotations that appear within <blockquote> tags but might
+overlook the exact same words enclosed in plain vanilla <div> tags). In short, designing a page semantically not only
+future-proofs that page against maintenance problems but also adds further benefits of improved speed, audience
+inclusivity, and visibility across the World Wide Web.
+-->

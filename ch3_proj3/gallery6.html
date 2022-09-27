@@ -1,0 +1,75 @@
+<!--
+Sebastian Thomas Bach
+00332111@student.necc.edu
+Affiliation: Student, Northern Essex Community College
+Course: CIS 235, Web Programming I
+Instructor: Professor Ethel Schuster
+Assignment: Assignment #2: HTML Basics Practice, Project 3
+Filename: gallery6.html
+Date: 9/23/2022
+Description: This assignment asks the student to begin designing an art store website that features a landing page,
+six art gallery pages, and graphics provided by the textbook authors. Students should use the instructions and images
+of the finished webpages in the textbook as a guide to constructing this website.
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=yes, initial-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- I have made use of a splash of CSS styling to improve legibility and maintain the look of the page across
+     different device screens. -->
+    <link type="text/css" rel="stylesheet" href="css/ch03-proj3.css">
+    <title>Louvre Museum</title>
+</head>
+<body>
+    <header>
+        <a href="cho03-proj3.html">
+            <!-- Because this is a gallery site containing some large images, I thought it would be best to offer some
+            progressive reduction in the size of the header file based on screen size, hence the use of the <picture>
+            tag to achieve that objective. Despite this deviation from the instructions, I have adhered to the
+            textbook's stipulation that "The <body> should contain just seven <img> elements."-->
+            <picture>
+                <source media="(max-width: 499px)" srcset="images/gallery-thin-500w.png">
+                <source media="(max-width: 749px)" srcset="images/gallery-thin-750w.png">
+                <source media="(max-width: 999px)" srcset="images/gallery-thin-1000w.png">
+                <img src="images/gallery-thin-1500w.png" alt="Art Gallery Viewer header image">
+            </picture>
+        </a>
+    </header>
+
+    <main>
+        <h1>Louvre Museum</h1>
+
+        <hr>
+
+        <section>
+        <h2>Address</h2>
+            <address>
+                <strong>Louvre Museum</strong><br>
+                Rue de Rivoli, 75001<br>
+                Paris, France<br>
+                <!-- I have altered the link below to use HTTPS to adhere to best practices. -->
+                <a href="https://www.louvre.fr/">https://www.louvre.fr/</a>
+            </address>
+
+            <p>
+                <a href="https://maps.google.com/?q=48.8611,2.33638"><em>View in map</em></a>
+            </p>
+        </section>
+
+        <hr>
+
+        <section class="highlights">
+        <h2>Highlights</h2>
+            <!-- The textbook did not supply alt attribute data. However, because it is best practice to do so, I
+             have provided alt attributes below. Also, removing the space between the images below worked better for
+             the overall look of the page (especially on smaller screens). -->
+            <img src="images/louvre1.jpg" alt="Liberty Leading the People by Eugène Delacroix"><img src="images/louvre2.jpg" alt="Mademoiselle Caroline Rivière by Jean-Auguste-Dominique Ingres"><img src="images/louvre3.jpg" alt="Portrait of Lisa Gherardini, wife of Francesco del Giocondo, also called Mona Lisa by Leonardo da Vinci"><img src="images/louvre4.jpg" alt="Portrait of the Artist Holding a Thistle by Albrecht Dürer">
+        </section>
+    </main>
+
+</body>
+</html>

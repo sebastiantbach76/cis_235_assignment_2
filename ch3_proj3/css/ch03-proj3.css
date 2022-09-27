@@ -1,0 +1,55 @@
+/*
+Sebastian Thomas Bach
+00332111@student.necc.edu
+Affiliation: Student, Northern Essex Community College
+Course: CIS 235, Web Programming I
+Instructor: Professor Ethel Schuster
+Assignment: Assignment #2: HTML Basics Practice, Project 3
+Filename: ch03-proj3.css
+Date: 9/23/2022
+Description: This assignment asks the student to begin designing an art store website that features a landing page and six art gallery pages using the graphics provided by the textbook authors. Students should use the instructions and images of the finished webpages in the textbook as a guide to constructing this website.
+*/
+
+body {
+    font-family: Arial, sans-serif; /* Taking your advice to heart about more legible, sans-serif fonts. */
+}
+
+p {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+address {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+header img {
+    width: 100%;
+    min-width: 250px;
+    max-width: 1500px;
+}
+
+.galleries {
+    margin: 0;
+    padding: 0;
+    max-width: 1500px;
+}
+
+.galleries img {
+    padding: 0;
+    margin: 0;
+    width: 16.66% /* Gallery images will stay inline and aligned with header image regardless of screen size. */
+}
+
+.galleries img:hover {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.9); /* Adding a simple effect to make these static buttons stand out. */
+}
+
+.highlights {
+    max-width: 600px;
+}
+
+.highlights img {
+    width: 25%; /* Highlight images will stay inline regardless of screen size. */
+}
